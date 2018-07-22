@@ -2,11 +2,15 @@ import React from 'react'
 import words from '../words.json'
 
 export default class Page extends React.PureComponent {
-  state = {
-    word: '',
-    translate: '',
-    rightTranslate: ''
+  constructor(props) {
+    super(props)
+    this.state = {
+      word: '',
+      translate: '',
+      rightTranslate: ''
+    }
   }
+  
 
   componentDidMount(){
     this.getWord()
