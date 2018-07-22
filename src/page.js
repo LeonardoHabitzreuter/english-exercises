@@ -2,13 +2,10 @@ import React from 'react'
 import words from '../words.json'
 
 export default class Page extends React.PureComponent {
-  constructor(props){
-    super(props)
-    this.state = {
-      word: '',
-      translate: '',
-      rightTranslate: ''
-    }
+  state = {
+    word: '',
+    translate: '',
+    rightTranslate: ''
   }
 
   componentDidMount(){
@@ -39,6 +36,8 @@ export default class Page extends React.PureComponent {
   keyHandler(key) {
     if (key === 'Enter') {
       alert(this.state.rightTranslate)
+
+      this.setState({ translate: '' })
       this.getWord()
     }
   }
