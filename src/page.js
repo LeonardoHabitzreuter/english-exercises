@@ -1,10 +1,17 @@
 import React from 'react'
 import words from '../words.json'
+import expressions from '../expressions.json'
+
+const MODES = {
+  words,
+  expressions
+}
 
 export default class Page extends React.PureComponent {
   constructor(props) {
     super(props)
     this.state = {
+      mode: 'words',
       word: '',
       translate: '',
       rightTranslate: ''
@@ -17,11 +24,13 @@ export default class Page extends React.PureComponent {
   }
 
   getWord () {
-    const randomWord = Math.floor(Math.random() * words.length)
+    const source = MODES[this.state.mode]
+
+    const randomWord = Math.floor(Math.random() * source.length)
     const randomLanguage = Math.floor(Math.random() * 2)
     this.setState({
-      word: words[randomWord][randomLanguage],
-      rightTranslate: words[randomWord][ randomLanguage === 0 ? 1 : 0 ]
+      word: source[randomWord][randomLanguage],
+      rightTranslate: source[randomWord][ randomLanguage === 0 ? 1 : 0 ]
     })
   }
 
@@ -46,6 +55,10 @@ export default class Page extends React.PureComponent {
     }
   }
   
+  changeMode(mode) {
+    this.setState({ mode, translate: '' }, () => this.getWord())
+  }
+
   render (){
     return (
       <div>
@@ -65,14 +78,17 @@ export default class Page extends React.PureComponent {
             value={this.state.translate}
             onChange={e => this.changeValue(e.target.value)}
             onKeyUp={e => this.keyHandler(e.key)}
+            className='p-4 m-4'
             style={{
               fontSize: '2rem',
               textAlign: 'center',
               height: '30px',
-              marginTop: '2rem',
-              borderRadius: '10px',
-              padding: '8px'
+              borderRadius: '10px'
           }}/>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <button className='btn btn-primary m-1' disabled={this.state.mode === 'words'} onClick={() => this.changeMode('words')}>words</button>
+        <button className='btn btn-primary m-1' disabled={this.state.mode === 'expressions'} onClick={() => this.changeMode('expressions')}>expressions</button>
         </div>
       </div>
     )
