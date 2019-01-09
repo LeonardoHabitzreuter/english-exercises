@@ -9,7 +9,7 @@
   ["de nada", "anytime"],
   ["que diz respeito", "regard"],
   ["mijar", "take a leak"],
-  ["eu não acredito", "I don't buy it"],
+  ["eu nao acredito", "I don't buy it"],
   ["que vale a pena", "worthwhile"],
   ["voce nao usou esse chapeu", "you haven't worn this hat"],
   ["eu usei isso a sete anos atras", "I just wore this about seven years ago"],
@@ -25,5 +25,13 @@
   ["quando eu penso em", "when I think of"],
   ["por outro lado", "on the other hand"],
   ["por que eu nao posso?", "why can not I?"],
-  ["Eu não sou acostumado a gastar dinheiro demais", "I am not used to spending too much money"]
+  ["eu nao sou acostumado a gastar dinheiro demais", "I am not used to spending too much money"],
+  ["sao cerca de 2 quarteiroes do escritorio ate a casa dela", "it’s about 2 blocks from the office to her place"],
+  ["eu prefiro ir ao cinema doq ficar em casa", "I prefer going to the movies to staying at home"],
+  ["uma vez a cada duas semanas", "once every two weeks"],
+  ["como estao tuas notas?", "how are your grades?"],
+  ["pelo bem do dean", "for dean's sake"],
+  ["fazer um exame", "take an exam"],
+  ["fazer uma prova", "take a test"],
+  ["to work abroad", "trabalhar no exterior"]
 ]

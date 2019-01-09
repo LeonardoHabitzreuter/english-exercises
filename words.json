@@ -1,6 +1,4 @@
 [
-  ["refrigerante", "pop"],
-  ["roupa", "clothes"],
   ["preguica", "laziness"],
   ["comeu", "ate"],
   ["reclamacao", "complaint"],
@@ -26,7 +24,8 @@
   ["sapo", "frog"],
   ["correr atras", "chase"],
   ["perseguidor", "chaser"],
-  ["rastejar", "creep"],
+  ["rastejar", "to creep"],
+  ["aleijado", "crippled"],
   ["coçar", "scratch"],
   ["preciso", "accurate"],
   ["perola", "pearl"],
@@ -67,5 +66,8 @@
   ["túmulo", "grave"],
   ["bate papo", "chitchat"],
   ["desaparecer", "vanish"],
-  ["criar um plano para gastar o dinheiro", "Budgeting"]
+  ["criar um plano para gastar o dinheiro", "Budgeting"],
+  ["pegando carona", "hitchhiking"],
+  ["red tape", "burocracia"],
+  ["mostly", "na maioria das vezes"]
 ]
